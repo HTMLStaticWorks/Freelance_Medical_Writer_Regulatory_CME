@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedWrite Pro | Corporate Medical Writing Solutions</title>
+    <meta name="description"
+        content="Corporate medical writing solutions — regulatory documents, CME programs, and clinical publications for global pharma leaders.">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <style>
+        /* ---- Home-2 shared overrides ---- */
+        .h2-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #020617 0%, #0a1628 50%, #0f2744 100%);
+            position: relative;
+            overflow: hidden;
+            padding-top: 100px;
+        }
+
+        .h2-hero-particles {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .h2-hero-particles span {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(14, 165, 233, 0.25);
+            animation: particleFloat linear infinite;
+        }
+
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-10vh) scale(1);
+                opacity: 0;
+            }
+        }
+
+        .h2-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(14, 165, 233, 0.15);
+            border: 1px solid rgba(14, 165, 233, 0.35);
+            border-radius: 100px;
+            padding: 8px 20px;
+            color: #38bdf8;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            margin-bottom: 28px;
+            backdrop-filter: blur(6px);
+        }
+
+        .h2-hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #f8fafc;
+            line-height: 1.15;
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        .h2-hero h1 span {
+            background: linear-gradient(90deg, #0ea5e9, #38bdf8, #7dd3fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .h2-hero p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            max-width: 500px;
+        }
+
+        .h2-hero-visual {
+            position: relative;
+        }
+
+        .h2-hero-img-wrap {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(14, 165, 233, 0.2);
+        }
+
+        .h2-hero-img-wrap img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            height: 480px;
+        }
+
+        .floating-badge-card {
+            position: absolute;
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(14, 165, 233, 0.25);
+            border-radius: 14px;
+            padding: 16px 20px;
+            backdrop-filter: blur(12px);
+            white-space: nowrap;
+            animation: badgeBob 4s infinite ease-in-out;
+        }
+
+        .floating-badge-card.top-left {
+            top: 30px;
+            left: -30px;
+            animation-delay: 0s;
+        }
+
+        .floating-badge-card.bottom-right {
+            bottom: 30px;
+            right: -30px;
+            animation-delay: 2s;
+        }
+
+        @keyframes badgeBob {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .floating-badge-card .fbc-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            margin-right: 10px;
+        }
+
+        .floating-badge-card strong {
+            color: #f1f5f9;
+            font-size: 0.95rem;
+            display: block;
+        }
+
+        .floating-badge-card span {
+            color: #64748b;
+            font-size: 0.8rem;
+        }
+
+        /* ---- SECTION 1: Therapeutic Areas ---- */
+        .ta-section {
+            padding: 110px 0;
+            background: #f8fafc;
+        }
+
+        .ta-card {
+            background: #fff;
+            border-radius: 18px;
+            border: 1px solid #e2e8f0;
+            padding: 36px 30px;
+            transition: all 0.4s ease;
+            cursor: default;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ta-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #0ea5e9, #2563eb);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .ta-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .ta-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 24px 48px rgba(37, 99, 235, 0.12);
+            border-color: rgba(14, 165, 233, 0.3);
+        }
+
+        .ta-icon-wrap {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+
+        .ta-card:hover .ta-icon-wrap {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .ta-card h5 {
+            font-size: 1rem;
+            color: #0f172a;
+            font-weight: 700;
+            text-align: left;
+            margin-bottom: 8px;
+        }
+
+        .ta-card p {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin: 0;
+            text-align: left;
+        }
+
+        .ta-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #f1f5f9;
+            border-radius: 6px;
+            padding: 3px 10px;
+            font-size: 0.75rem;
+            color: #475569;
+            margin-top: 12px;
+            font-weight: 500;
+        }
+
+        /* ---- SECTION 2: Featured CME Spotlight ---- */
+        .cme-spotlight {
+            padding: 110px 0;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cme-spotlight::before {
+            content: '';
+            position: absolute;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.08) 0%, transparent 70%);
+            top: -200px;
+            right: -200px;
+        }
+
+        .cme-spotlight .section-title span {
+            color: #38bdf8;
+        }
+
+        .cme-spotlight .section-title h2 {
+            color: #f8fafc;
+        }
+
+        .cme-frame {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .cme-frame-header {
+            background: rgba(14, 165, 233, 0.12);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cme-frame-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .cme-frame-body {
+            position: relative;
+        }
+
+        .cme-frame-body img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            height: 320px;
+        }
+
+        .cme-play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: rgba(14, 165, 233, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: #fff;
+            box-shadow: 0 0 0 12px rgba(14, 165, 233, 0.2);
+            transition: all 0.3s;
+            cursor: pointer;
+            animation: playPulse 2.5s infinite;
+        }
+
+        @keyframes playPulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 12px rgba(14, 165, 233, 0.2);
+            }
+
+            50% {
+                box-shadow: 0 0 0 20px rgba(14, 165, 233, 0.08);
+            }
+        }
+
+        .cme-play-btn:hover {
+            background: #0ea5e9;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .cme-module-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .cme-module-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            transition: padding-left 0.3s;
+            cursor: default;
+        }
+
+        .cme-module-list li:last-child {
+            border-bottom: none;
+        }
+
+        .cme-module-list li:hover {
+            padding-left: 6px;
+        }
+
+        .cme-mod-icon {
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            background: rgba(14, 165, 233, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #38bdf8;
+            font-size: 1.1rem;
+        }
+
+        .cme-mod-text strong {
+            display: block;
+            color: #f1f5f9;
+            font-size: 0.95rem;
+            margin-bottom: 3px;
+        }
+
+        .cme-mod-text span {
+            color: #64748b;
+            font-size: 0.82rem;
+        }
+
+        /* ---- SECTION 3: CTA / Contact Strip ---- */
+        .cta-strip {
+            padding: 0;
+        }
+
+        .cta-strip-inner {
+            background: linear-gradient(135deg, #1e40af 0%, #0ea5e9 100%);
+            border-radius: 24px;
+            padding: 70px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .cta-strip-inner::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.06);
+            right: -80px;
+            top: -120px;
+        }
+
+        .cta-strip-inner::after {
+            content: '';
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.04);
+            left: -50px;
+            bottom: -80px;
+        }
+
+        .cta-text h2 {
+            color: #fff;
+            font-size: 2.4rem;
+            text-align: left;
+            margin-bottom: 12px;
+        }
+
+        .cta-text p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+            margin: 0;
+            max-width: 460px;
+        }
+
+        .cta-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .btn-cta-white {
+            background: #fff;
+            color: #1e40af;
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-weight: 700;
+            border: none;
+            transition: all 0.3s;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-cta-white:hover {
+            background: #f1f5f9;
+            color: #1e40af;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-cta-outline {
+            background: transparent;
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-weight: 700;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            transition: all 0.3s;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-cta-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #fff;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .cta-section-wrap {
+            padding: 90px 0;
+            background: #f8fafc;
+        }
+
+        /* Scroll reveal */
+        .rev {
+            opacity: 0;
+            transform: translateY(36px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .rev.on {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .rev.d1 {
+            transition-delay: 0.1s;
+        }
+
+        .rev.d2 {
+            transition-delay: 0.22s;
+        }
+
+        .rev.d3 {
+            transition-delay: 0.34s;
+        }
+
+        .rev.d4 {
+            transition-delay: 0.46s;
+        }
+
+        .rev.d5 {
+            transition-delay: 0.58s;
+        }
+
+        .rev.d6 {
+            transition-delay: 0.70s;
+        }
+
+        @media (max-width: 991px) {
+            .row.g-5 {
+                --bs-gutter-x: 1.5rem;
+            }
+
+            .h2-hero h1 {
+                font-size: 2.6rem;
+            }
+
+            .cta-strip-inner {
+                padding: 50px 30px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cta-text h2 {
+                text-align: center;
+            }
+
+            .cta-text p {
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .h2-hero h1 {
+                font-size: 2.1rem;
+                text-align: center;
+            }
+
+            .h2-hero p {
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            .h2-hero-badge {
+                margin: 0 auto 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header header-transparent-dark" id="mainHeader">
+        <div class="container">
+            <nav class="navbar navbar-expand-xl">
+                <a class="navbar-brand" href="index.html">
+                    <i class="bi bi-shield-plus"></i>
+                    <span>MedWrite Pro</span>
+                </a>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="home-2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="d-flex align-items-center gap-3 ms-auto">
+                    <div id="darkModeToggle" class="dark-mode-toggle"><i class="bi bi-moon"></i></div>
+                    <button id="rtlToggle" type="button" class="rtl-toggle" aria-label="Toggle RTL"><i
+                            class="bi bi-arrow-left-right"></i></button>
+                    <a href="dashboard.html" class="rtl-toggle d-none d-xl-inline-flex" aria-label="Dashboard"><i class="bi bi-grid-1x2"></i></a>
+                    <a href="login.html" class="btn btn-outline-premium d-none d-xl-flex">Login</a>
+                    <a href="register.html" class="btn btn-premium d-none d-xl-flex">Sign Up</a>
+<div id="mobileMenuToggle" class="d-xl-none fs-1 cursor-pointer"><i class="bi bi-list"></i></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div id="mobileNav" class="mobile-nav">
+        <i id="closeMenu" class="bi bi-x close-menu"></i>
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="home-2.html">Home 2</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="services.html">Services</a>
+
+        <a class="nav-link" href="blog.html">Blog</a>        <a class="nav-link" href="contact.html">Contact</a>
+        <div class="mt-4 d-flex flex-column gap-3 w-75">
+            <a href="login.html" class="btn btn-outline-premium w-100">Login</a>
+            <a href="register.html" class="btn btn-premium w-100">Sign Up</a>
+</div>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="h2-hero">
+        <!-- Floating particles -->
+        <div class="h2-hero-particles" id="particleContainer"></div>
+        <div class="container position-relative" style="z-index:2;">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    
+                    <h1 class="rev d1">Corporate Medical<br><span>Writing Solutions</span></h1>
+                    <p class="mb-5 rev d2">Driving scientific clarity for global pharmaceutical leaders — from clinical
+                        trial documents to accredited CME programs.</p>
+                    <div class="d-flex gap-3 flex-wrap rev d3">
+                        <a href="services.html" class="btn btn-premium">Explore Services <i
+                                class="bi bi-arrow-right"></i></a>
+                        <a href="contact.html" class="btn btn-outline-premium"
+                            style="color:#fff; border-color:rgba(255,255,255,0.4);">Get a Quote</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 h2-hero-visual rev d2">
+                    <div class="h2-hero-img-wrap">
+                        <img src="assets/images/cme.png" alt="Corporate Medical Writing">
+                    </div>
+                    
+                    
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 1: THERAPEUTIC AREAS EXPERTISE GRID ===== -->
+    <section class="ta-section" id="therapeutic-areas">
+        <div class="container">
+            <div class="section-title text-center rev">
+                <span>Specialisation</span>
+                <h2>Therapeutic Area Expertise</h2>
+                <p class="text-muted" style="max-width:540px; margin:0 auto;">Deep scientific knowledge across the
+                    therapeutic areas where precision and regulatory expertise matter most.</p>
+            </div>
+            <div class="row g-4 mt-2">
+                <div class="col-lg-4 col-md-6 rev d1">
+                    <div class="ta-card">
+                        <div class="ta-icon-wrap" style="background:#eff6ff; color:#2563eb;"><i
+                                class="bi bi-heart-pulse-fill"></i></div>
+                        <h5>Oncology &amp; Haematology</h5>
+                        <p>Clinical evaluation reports, IBs, and CSRs for novel oncology therapeutics including ADCs and
+                            CAR-T cell therapies.</p>
+                        <div class="ta-tag"><i class="bi bi-journal-medical"></i> CER / CSR / IB</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 rev d2">
+                    <div class="ta-card">
+                        <div class="ta-icon-wrap" style="background:#f0fdf4; color:#16a34a;"><i
+                                class="bi bi-activity"></i></div>
+                        <h5>Cardiovascular &amp; Metabolic</h5>
+                        <p>Regulatory dossiers and scientific publications for cardiovascular drugs, diabetes therapies,
+                            and lipid-lowering agents.</p>
+                        <div class="ta-tag"><i class="bi bi-file-earmark-text"></i> PSUR / RMP / MAA</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 rev d3">
+                    <div class="ta-card">
+                        <div class="ta-icon-wrap" style="background:#fdf4ff; color:#a21caf;"><i
+                                class="bi bi-braces-asterisk"></i></div>
+                        <h5>Rare Diseases &amp; Biologics</h5>
+                        <p>Orphan drug designation support, risk management plans, and EU/US marketing authorisation
+                            documentation.</p>
+                        <div class="ta-tag"><i class="bi bi-capsule"></i> ODD / RMP / BLA</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 rev d4">
+                    <div class="ta-card">
+                        <div class="ta-icon-wrap" style="background:#fff7ed; color:#ea580c;"><i
+                                class="bi bi-lungs-fill"></i></div>
+                        <h5>Respiratory &amp; Immunology</h5>
+                        <p>Asthma, COPD, and autoimmune indication documents — from Phase II protocols to post-approval
+                            safety updates.</p>
+                        <div class="ta-tag"><i class="bi bi-patch-check"></i> Protocol / SAR</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 rev d5">
+                    <div class="ta-card">
+                        <div class="ta-icon-wrap" style="background:#f0f9ff; color:#0284c7;"><i
+                                class="bi bi-mortarboard-fill"></i></div>
+                        <h5>CME &amp; Medical Education</h5>
+                        <p>ACCME-compliant continuing medical education programmes — needs assessments, slide decks, and
+                            outcomes reports.</p>
+                        <div class="ta-tag"><i class="bi bi-award"></i> ACCME / AMA PRA</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 rev d6">
+                    <div class="ta-card">
+                        <div class="ta-icon-wrap" style="background:#fefce8; color:#ca8a04;"><i
+                                class="bi bi-diagram-3-fill"></i></div>
+                        <h5>Neuroscience &amp; CNS</h5>
+                        <p>Manuscripts, systematic reviews, and regulatory filings for neurological and psychiatric
+                            indication drugs.</p>
+                        <div class="ta-tag"><i class="bi bi-journal-richtext"></i> Manuscript / SLR</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 2: FEATURED CME SPOTLIGHT ===== -->
+    <section class="cme-spotlight" id="cme-spotlight">
+        <div class="container position-relative" style="z-index:2;">
+            <div class="section-title text-center rev">
+                <span>Featured Programme</span>
+                <h2>CME Content Spotlight</h2>
+                <p style="color:#94a3b8; max-width:540px; margin:0 auto;">A look inside our end-to-end CME development
+                    process — from needs analysis to certified programme delivery.</p>
+            </div>
+            <div class="row align-items-center g-5 mt-2">
+                <!-- Video-style frame -->
+                <div class="col-lg-6 rev d1">
+                    <div class="cme-frame">
+                        <div class="cme-frame-header">
+                            <div class="cme-frame-dot" style="background:#ff5f57;"></div>
+                            <div class="cme-frame-dot" style="background:#ffbd2e;"></div>
+                            <div class="cme-frame-dot" style="background:#28c840;"></div>
+                            <span style="color:#64748b; font-size:0.8rem; margin-left:10px;">MedWrite CME Studio</span>
+                        </div>
+                        <div class="cme-frame-body">
+                            <img src="assets/images/cme.png" alt="CME Programme Preview">
+                            <div class="cme-play-btn"><i class="bi bi-play-fill"></i></div>
+                        </div>
+                    </div>
+                    <!-- Accreditation badges -->
+                    <div class="d-flex gap-3 mt-4 flex-wrap">
+                        <div
+                            style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:12px 18px; display:flex; align-items:center; gap:10px;">
+                            <i class="bi bi-patch-check-fill" style="color:#38bdf8; font-size:1.3rem;"></i>
+                            <div>
+                                <div style="color:#f1f5f9; font-size:0.85rem; font-weight:600;">ACCME Accredited</div>
+                                <div style="color:#64748b; font-size:0.75rem;">Programme Standards</div>
+                            </div>
+                        </div>
+                        <div
+                            style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:12px 18px; display:flex; align-items:center; gap:10px;">
+                            <i class="bi bi-award-fill" style="color:#fbbf24; font-size:1.3rem;"></i>
+                            <div>
+                                <div style="color:#f1f5f9; font-size:0.85rem; font-weight:600;">AMA PRA Category 1</div>
+                                <div style="color:#64748b; font-size:0.75rem;">CME Credits Certified</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Module list -->
+                <div class="col-lg-6 rev d2">
+                    <h3 style="color:#f8fafc; text-align:left; margin-bottom:8px;">What's Included in Every CME
+                        Programme</h3>
+                    <p style="color:#64748b; margin-bottom:32px;">Our structured methodology ensures clinical accuracy,
+                        regulatory compliance, and maximal HCP engagement.</p>
+                    <ul class="cme-module-list">
+                        <li>
+                            <div class="cme-mod-icon"><i class="bi bi-search"></i></div>
+                            <div class="cme-mod-text">
+                                <strong>Educational Needs Assessment (ENA)</strong>
+                                <span>Gap analysis mapped to clinical practice and outcome data to justify the
+                                    educational activity.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cme-mod-icon"><i class="bi bi-book-half"></i></div>
+                            <div class="cme-mod-text">
+                                <strong>Scientific Content Development</strong>
+                                <span>Evidence-based slide decks, monographs, and case studies reviewed by a faculty of
+                                    KOLs.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cme-mod-icon"><i class="bi bi-bar-chart-steps"></i></div>
+                            <div class="cme-mod-text">
+                                <strong>Outcomes Measurement &amp; Reporting</strong>
+                                <span>Pre/post assessments, knowledge transfer metrics, and ACCME outcomes reporting
+                                    dashboards.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cme-mod-icon"><i class="bi bi-shield-check"></i></div>
+                            <div class="cme-mod-text">
+                                <strong>Compliance &amp; Independence Review</strong>
+                                <span>Full ACCME Standards for Integrity and Independence review with documented
+                                    sign-off trail.</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="services.html" class="btn btn-premium mt-4">Explore CME Services <i
+                            class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 3: CTA CONTACT STRIP ===== -->
+    <section class="cta-section-wrap" id="cta">
+        <div class="container">
+            <div class="cta-strip-inner rev">
+                <div class="cta-text">
+                    <h2>Ready to Elevate Your Medical Documentation?</h2>
+                    <p>Whether it's a single CER or a full-scope CME programme — let's talk about how we can deliver
+                        precision writing that gets results.</p>
+                </div>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn-cta-white"><i class="bi bi-envelope-fill"></i> Start a Project</a>
+                    <a href="pricing.html" class="btn-cta-outline"><i class="bi bi-tag"></i> View Pricing</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 text-center text-lg-start">
+                    <a class="navbar-brand text-white mb-4" href="#">
+                        <i class="bi bi-shield-plus"></i>
+                        <span>MedWrite Pro</span>
+                    </a>
+                    <p class="text-muted mt-3">Providing premium medical writing services specializing in Regulatory,
+                        CER, and CME documentation for global pharmaceutical leaders.</p>
+                    <div class="social-links justify-content-center justify-content-lg-start">
+                        <a href="#" class="social-btn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 text-center text-md-start">
+                    <h5>Quick Links</h5>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="blog.html" class="footer-link">Blog</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                <div class="col-lg-2 col-md-4 text-center text-md-start">
+                    <h5>Services</h5>
+                    <a href="services.html" class="footer-link">Regulatory Writing</a>
+                    <a href="services.html" class="footer-link">CER Documentation</a>
+                    <a href="services.html" class="footer-link">CME Dev</a>
+                    <a href="services.html" class="footer-link">Clinical Summaries</a>
+                    <a href="services.html" class="footer-link">Manuscripts</a>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center text-md-start">
+                    <h5>Newsletter</h5>
+                    <p class="text-muted">Stay updated with medical writing trends.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Email address" aria-label="Email address">
+                        <button class="btn btn-premium" type="button">Join</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 border-secondary">
+            <div class="text-center text-muted small">
+                &copy; 2026 MedWrite Pro. All rights reserved. | Regulatory Compliant
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        (function () {
+            // Particle generator
+            const container = document.getElementById('particleContainer');
+            if (container) {
+                for (let i = 0; i < 20; i++) {
+                    const s = document.createElement('span');
+                    const size = Math.random() * 10 + 4;
+                    s.style.cssText = `
+                    width:${size}px; height:${size}px;
+                    left:${Math.random() * 100}%;
+                    animation-duration:${6 + Math.random() * 10}s;
+                    animation-delay:${Math.random() * 8}s;
+                    opacity:${0.2 + Math.random() * 0.5};
+                `;
+                    container.appendChild(s);
+                }
+            }
+
+            // Scroll reveal
+            const revs = document.querySelectorAll('.rev');
+            const ro = new IntersectionObserver(entries => {
+                entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); ro.unobserve(e.target); } });
+            }, { threshold: 0.1 });
+            revs.forEach(el => ro.observe(el));
+        })();
+    </script>
+</body>
+
+</html>
+
+
+

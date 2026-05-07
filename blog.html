@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Writing Insights | MedWrite Pro Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+</head>
+
+<body class="blog-page">
+
+    <header class="header scrolled keep-scrolled">
+        <div class="container">
+            <nav class="navbar navbar-expand-xl">
+                <a class="navbar-brand" href="index.html">
+                    <i class="bi bi-shield-plus"></i>
+                    <span>MedWrite Pro</span>
+                </a>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="d-flex align-items-center gap-3 ms-auto">
+                    <div id="darkModeToggle" class="dark-mode-toggle"><i class="bi bi-moon"></i></div>
+                    <button id="rtlToggle" type="button" class="rtl-toggle" aria-label="Toggle RTL"><i
+                            class="bi bi-arrow-left-right"></i></button>
+                    <a href="dashboard.html" class="rtl-toggle d-none d-xl-inline-flex" aria-label="Dashboard"><i class="bi bi-grid-1x2"></i></a>
+                    <a href="login.html" class="btn btn-outline-premium d-none d-xl-flex">Login</a>
+                    <a href="register.html" class="btn btn-premium d-none d-xl-flex">Sign Up</a>
+<div id="mobileMenuToggle" class="d-xl-none fs-1 cursor-pointer"><i class="bi bi-list"></i></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div id="mobileNav" class="mobile-nav">
+        <i id="closeMenu" class="bi bi-x close-menu"></i>
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="home-2.html">Home 2</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="blog.html">Blog</a>        <a class="nav-link" href="contact.html">Contact</a>
+        <div class="mt-4 d-flex flex-column gap-3 w-75">
+            <a href="login.html" class="btn btn-outline-premium w-100">Login</a>
+            <a href="register.html" class="btn btn-premium w-100">Sign Up</a>
+</div>
+    </div>
+
+    <section class="py-5 mt-5 bg-dark text-white text-center">
+        <div class="container mt-5">
+            <h1 class="text-white">Scientific Insights & Regulatory Updates</h1>
+            <p class="opacity-75">Analysis and commentary on the evolving landscape of medical writing.</p>
+        </div>
+    </section>
+
+    <section class="blog-grid">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Blog Post 1 -->
+                <div class="col-md-4">
+                    <div class="premium-card p-0 overflow-hidden text-start align-items-start">
+                        <img src="assets/images/manuscript.png" class="img-fluid w-100"
+                            style="height: 200px; object-fit: cover;">
+                        <div class="p-4">
+                            <div class="badge bg-soft-blue text-primary mb-3">Regulatory</div>
+                            <h5>Navigating the 2026 MDR Compliance Landscape</h5>
+                            <p class="small text-muted mb-4">Key changes and what they mean for medical device
+                                manufacturers in the EEA.</p>
+                            <a href="blog-details.html" class="btn btn-outline-premium btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Post 2 -->
+                <div class="col-md-4">
+                    <div class="premium-card p-0 overflow-hidden text-start align-items-start">
+                        <img src="assets/images/cme.png" class="img-fluid w-100"
+                            style="height: 200px; object-fit: cover;">
+                        <div class="p-4">
+                            <div class="badge bg-soft-blue text-primary mb-3">CME</div>
+                            <h5>Digital Transformation in medical Education</h5>
+                            <p class="small text-muted mb-4">How interactive content is reshaping Continuing Medical
+                                Education for doctors.</p>
+                            <a href="blog-details.html" class="btn btn-outline-premium btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Post 3 -->
+                <div class="col-md-4">
+                    <div class="premium-card p-0 overflow-hidden text-start align-items-start">
+                        <img src="assets/images/team.png" class="img-fluid w-100"
+                            style="height: 200px; object-fit: cover;">
+                        <div class="p-4">
+                            <div class="badge bg-soft-blue text-primary mb-3">Pharma</div>
+                            <h5>Effective Data Interpretation in CER</h5>
+                            <p class="small text-muted mb-4">Practical tips for medical writers on presenting complex
+                                clinical trial data.</p>
+                            <a href="blog-details.html" class="btn btn-outline-premium btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Blog Page Unique Animations */
+        .blog-grid .premium-card {
+            align-items: flex-start !important;
+        }
+
+        .blog-grid .premium-card .p-4 {
+            width: 100%;
+            text-align: left;
+        }
+
+        .blog-grid .premium-card h5,
+        .blog-grid .premium-card p {
+            text-align: left;
+        }
+
+        .blog-grid .premium-card .badge {
+            display: inline-block;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .blog-grid .premium-card .btn-outline-premium {
+            display: flex;
+            width: fit-content;
+            margin: 0 auto 0 0;
+        }
+
+        .anim-slide-up-box {
+            animation: slideUpBox 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+        }
+
+        @keyframes slideUpBox {
+            0% {
+                transform: translateY(60px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .slow-zoom-bg {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slow-zoom-bg img {
+            animation: slowZoom 20s linear infinite alternate;
+        }
+
+        @keyframes slowZoom {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.15);
+            }
+        }
+
+        .gradient-wipe {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--medical-blue) 50%, var(--primary) 100%);
+            background-size: 300% 100%;
+            animation: wipeGradient 8s ease infinite;
+        }
+
+        @keyframes wipeGradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .pulse-icon-anim {
+            animation: iconPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes iconPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+            }
+
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+            }
+        }
+
+        .jelly-hover {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .jelly-hover:hover {
+            animation: jellyBounce 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) both;
+            z-index: 10;
+        }
+
+        @keyframes jellyBounce {
+            0% {
+                transform: scale(1, 1);
+            }
+
+            30% {
+                transform: scale(1.05, 0.95);
+            }
+
+            40% {
+                transform: scale(0.95, 1.05);
+            }
+
+            50% {
+                transform: scale(1.02, 0.98);
+            }
+
+            65% {
+                transform: scale(0.98, 1.02);
+            }
+
+            75% {
+                transform: scale(1.01, 0.99);
+            }
+
+            100% {
+                transform: scale(1, 1);
+                box-shadow: var(--shadow-lg);
+                border-color: var(--medical-blue);
+            }
+        }
+    </style>
+
+    <!-- NEW SECTION 1: Featured Spotlight -->
+    <section class="py-5">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <span>Featured insight</span>
+                <h2>Must-Read of the Month</h2>
+            </div>
+            <div class="premium-card p-0 overflow-hidden slow-zoom-bg border-0 shadow-lg rounded-4 position-relative">
+                <img src="assets/images/hero.png" class="img-fluid w-100 object-fit-cover" style="height: 500px;">
+                <div class="position-absolute bottom-0 start-0 w-100 h-100"
+                    style="background: linear-gradient(to top, rgba(15,23,42,0.9), transparent);"></div>
+
+                <div class="position-absolute bottom-0 start-0 w-100 p-4 p-md-5">
+                    <div class="row">
+                        <div class="col-lg-8 anim-slide-up-box" style="animation-delay: 0.3s;">
+                            <span class="badge text-white fs-6 mb-3 px-3 py-2 rounded-pill shadow-sm"
+                                style="background-color: var(--medical-blue);">Special Report</span>
+                            <h3 class="display-6 fw-bold text-white mb-3 shadow-sm">The Evolution of Global Clinical
+                                Trials: Embracing AI in Writing</h3>
+                            <p class="lead text-white opacity-75 mb-4 shadow-sm">Discover how artificial intelligence is
+                                streamlining the literature review process for CERs without compromising scientific
+                                integrity.</p>
+                            <a href="blog-details.html"
+                                class="btn btn-light btn-lg text-primary fw-bold px-4 hover-lift">Read Full Report <i
+                                    class="bi bi-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION 2: Topic Map -->
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="section-title text-center mb-5">
+                <span>Browse by category</span>
+                <h2>Explore Popular Topics</h2>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="text-decoration-none">
+                        <div class="premium-card bg-white p-4 h-100 text-center jelly-hover border">
+                            <div class="rounded-circle overflow-hidden mx-auto mb-4 border border-3 border-light shadow-sm"
+                                style="width: 100px; height: 100px;">
+                                <img src="assets/images/manuscript.png" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <h4 class="text-dark">Regulatory</h4>
+                            <p class="small text-muted mb-0">15 Articles</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="text-decoration-none">
+                        <div class="premium-card bg-white p-4 h-100 text-center jelly-hover border">
+                            <div class="rounded-circle overflow-hidden mx-auto mb-4 border border-3 border-light shadow-sm"
+                                style="width: 100px; height: 100px;">
+                                <img src="assets/images/cme.png" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <h4 class="text-dark">CME Dev</h4>
+                            <p class="small text-muted mb-0">24 Articles</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="text-decoration-none">
+                        <div class="premium-card bg-white p-4 h-100 text-center jelly-hover border">
+                            <div class="rounded-circle overflow-hidden mx-auto mb-4 border border-3 border-light shadow-sm"
+                                style="width: 100px; height: 100px;">
+                                <img src="assets/images/team.png" class="w-100 h-100 object-fit-cover">
+                            </div>
+                            <h4 class="text-dark">Industry News</h4>
+                            <p class="small text-muted mb-0">18 Articles</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION 3: Newsletter Strip -->
+    <section class="py-5 text-white position-relative gradient-wipe overflow-hidden">
+        <div class="container py-5 position-relative z-1">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
+                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-3 mb-3">
+                        <div class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center pulse-icon-anim"
+                            style="width: 60px; height: 60px;">
+                            <i class="bi bi-envelope-paper-heart fs-3"></i>
+                        </div>
+                        <h3 class="fw-bold mb-0 text-white">Join Our Inner Circle</h3>
+                    </div>
+                    <p class="lead opacity-75 mb-0">Get exclusive regulatory updates and deep-dive analyses directly in
+                        your inbox, twice a month.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-white p-2 rounded-pill shadow-lg d-flex anim-slide-up-box"
+                        style="animation-delay: 0.5s;">
+                        <input type="email" class="form-control border-0 bg-transparent ps-4 fs-5 w-100"
+                            placeholder="Enter your work email..." style="box-shadow: none;">
+                        <button class="btn btn-premium rounded-pill px-4 fs-5 py-2 m-1 flex-shrink-0">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p>&copy; 2026 MedWrite Pro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
+
+
+
