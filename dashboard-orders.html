@@ -1,6 +1,7 @@
 <html lang="en">
 
 <head>
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orders | MedWrite Pro Dashboard</title>
@@ -14,21 +15,17 @@
 <body>
     <div class="dashboard-wrapper">
         <aside id="dashboardSidebar" class="dashboard-sidebar">
-            <div class="brand mb-5 d-flex align-items-center gap-2">
+            <a href="index.html" class="brand mb-5 d-flex align-items-center gap-2 text-decoration-none text-white">
                 <i class="bi bi-shield-plus text-primary fs-3"></i>
                 <span class="fw-bold fs-4">MedWrite Pro</span>
-            </div>
+            </a>
             <nav class="nav flex-column gap-2 mb-auto">
                 <a class="nav-link" href="dashboard.html"><i class="bi bi-graph-up-arrow"></i> Analytics</a>
                 <a class="nav-link" href="dashboard-users.html"><i class="bi bi-people"></i> Users</a>
                 <a class="nav-link active" href="dashboard-orders.html"><i class="bi bi-bag-check"></i> Orders</a>
                 <a class="nav-link" href="dashboard-messages.html"><i class="bi bi-chat-dots"></i> Messages</a>
             </nav>
-            <div class="dashboard-sidebar-controls d-flex gap-3 mt-3 mb-2">
-                <div id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle theme"><i class="bi bi-moon"></i></div>
-                <button id="rtlToggle" type="button" class="rtl-toggle" aria-label="Toggle RTL"><i
-                        class="bi bi-arrow-left-right"></i></button>
-            </div>
+
             <div class="mt-4">
                 <a class="nav-link text-danger" href="index.html"><i class="bi bi-box-arrow-left"></i> Logout</a>
             </div>
@@ -40,10 +37,12 @@
                     <button id="sidebarToggle" class="btn btn-light d-xl-none"><i class="bi bi-list"></i></button>
                     <h2 class="mb-0 fs-4">Orders</h2>
                 </div>
-                <div class="d-flex align-items-center gap-4">
-                    <div class="search-box d-none d-md-block">
-                        <input type="text" class="form-control rounded-pill px-4" placeholder="Search projects...">
-                    </div>
+                <div class="d-flex align-items-center gap-3">
+                    <div id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle theme"><i
+                            class="bi bi-moon"></i></div>
+                    <button id="rtlToggle" type="button" class="rtl-toggle" aria-label="Toggle RTL"><i
+                            class="bi bi-arrow-left-right"></i></button>
+
                     <div class="notifications position-relative">
                         <i class="bi bi-bell-fill fs-5 text-muted"></i>
                         <span
@@ -52,10 +51,6 @@
                     <div class="user-profile d-flex align-items-center gap-2">
                         <img src="https://ui-avatars.com/api/?name=Pharma+Client&background=0ea5e9&color=fff"
                             class="rounded-circle" width="40" height="40">
-                        <div class="d-none d-sm-block">
-                            <p class="small fw-bold mb-0">PharmaCorp Inc.</p>
-                            <p class="small text-muted mb-0">Project Manager</p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -169,5 +164,3 @@
 </body>
 
 </html>
-
-

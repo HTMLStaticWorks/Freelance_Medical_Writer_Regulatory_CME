@@ -116,4 +116,68 @@
     .dashboard-sidebar.active {
         left: 0;
     }
+
+    .dashboard-main {
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-topbar {
+        margin-bottom: 25px;
+        gap: 10px;
+    }
+
+    .dashboard-topbar h2 {
+        font-size: 1.15rem !important;
+    }
+
+    .dashboard-topbar-actions {
+        gap: 0.75rem !important;
+    }
+
+    .dashboard-topbar .dark-mode-toggle,
+    .dashboard-topbar .rtl-toggle {
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+    }
+
+    .user-profile img {
+        width: 36px !important;
+        height: 36px !important;
+    }
+}
+
+/* Dashboard Topbar Controls */
+.dashboard-topbar .dark-mode-toggle,
+.dashboard-topbar .rtl-toggle {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+    border-color: #cbd5e1;
+    color: #64748b;
+}
+
+.dashboard-topbar .dark-mode-toggle:hover,
+.dashboard-topbar .rtl-toggle:hover {
+    background: #f8fafc;
+    border-color: var(--medical-blue);
+    color: var(--medical-blue);
+}
+
+body.dark-mode .dashboard-topbar .dark-mode-toggle,
+body.dark-mode .dashboard-topbar .rtl-toggle {
+    border-color: rgba(148, 163, 184, 0.2);
+    color: #cbd5e1;
+}
+
+body.dark-mode .dashboard-topbar .dark-mode-toggle:hover,
+body.dark-mode .dashboard-topbar .rtl-toggle:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+}
+
+.dashboard-topbar-actions {
+    margin-left: auto;
 }

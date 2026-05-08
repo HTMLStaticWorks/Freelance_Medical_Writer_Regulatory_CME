@@ -136,6 +136,29 @@ body.dark-mode.service-page .premium-card {
     border-color: #1e293b !important;
 }
 
+body.dark-mode.service-page .accordion-item {
+    background-color: #0f172a !important;
+    border-color: #1e293b !important;
+}
+
+body.dark-mode.service-page .accordion-button {
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
+}
+
+body.dark-mode.service-page .accordion-button:not(.collapsed) {
+    background-color: rgba(37, 99, 235, 0.1) !important;
+    color: #38bdf8 !important;
+}
+
+body.dark-mode.service-page .accordion-button::after {
+    filter: brightness(0) invert(1);
+}
+
+body.dark-mode.service-page .accordion-body {
+    background-color: #0f172a !important;
+}
+
 /* Blog page dark mode fixes */
 body.dark-mode.blog-page section {
     background-color: #020617 !important;
