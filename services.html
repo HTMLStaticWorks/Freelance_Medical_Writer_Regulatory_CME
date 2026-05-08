@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <title>Services | MedWrite Pro - Regulatory & CME</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
@@ -26,17 +26,19 @@
                         <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="d-flex align-items-center gap-3 ms-auto">
                     <div id="darkModeToggle" class="dark-mode-toggle"><i class="bi bi-moon"></i></div>
                     <button id="rtlToggle" type="button" class="rtl-toggle" aria-label="Toggle RTL"><i
                             class="bi bi-arrow-left-right"></i></button>
-                    <a href="dashboard.html" class="rtl-toggle d-none d-xl-inline-flex" aria-label="Dashboard"><i class="bi bi-grid-1x2"></i></a>
+                    <a href="dashboard.html" class="rtl-toggle d-none d-xl-inline-flex" aria-label="Dashboard"><i
+                            class="bi bi-grid-1x2"></i></a>
                     <a href="login.html" class="btn btn-outline-premium d-none d-xl-flex">Login</a>
                     <a href="register.html" class="btn btn-premium d-none d-xl-flex">Sign Up</a>
-<div id="mobileMenuToggle" class="d-xl-none fs-1 cursor-pointer"><i class="bi bi-list"></i></div>
+                    <div id="mobileMenuToggle" class="d-xl-none fs-1 cursor-pointer"><i class="bi bi-list"></i></div>
                 </div>
             </nav>
         </div>
@@ -48,14 +50,15 @@
         <a class="nav-link" href="home-2.html">Home 2</a>
         <a class="nav-link" href="about.html">About</a>
         <a class="nav-link" href="services.html">Services</a>
-        <a class="nav-link" href="blog.html">Blog</a>        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="blog.html">Blog</a> <a class="nav-link" href="contact.html">Contact</a>
         <div class="mt-4 d-flex flex-column gap-3 w-75">
             <a href="login.html" class="btn btn-outline-premium w-100">Login</a>
             <a href="register.html" class="btn btn-premium w-100">Sign Up</a>
-</div>
+        </div>
     </div>
 
-    <section class="py-5 mt-5 bg-dark text-white text-center">
+    <section class="services-hero py-5 mt-5 text-white text-center"
+        style="background: linear-gradient(135deg, #1e3a8a 0%, #0ea5e9 100%);">
         <div class="container mt-5">
             <h1 class="text-white">Professional Clinical writing Services</h1>
             <p class="opacity-75">Tailored solutions for Pharma, Biotech, and MedTech industries.</p>
@@ -231,10 +234,142 @@
             /* Dark overlay */
         }
 
+        @media (max-width: 1199.98px) {
+            .service-page .header.scrolled.keep-scrolled {
+                background: transparent;
+                backdrop-filter: none;
+                box-shadow: none;
+                border-bottom: none;
+                padding: 20px 0;
+            }
+
+            .service-page,
+            .service-page section,
+            .service-page .container {
+                width: 100%;
+                max-width: 100vw;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            .service-page .services-hero {
+                margin-top: 0 !important;
+                padding-top: 115px !important;
+            }
+
+            .service-page .services-hero .container {
+                margin-top: 0 !important;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1199.98px) {
+            .service-page {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+            .service-page .container,
+            .service-page .row,
+            .service-page [class*="col-"] {
+                text-align: center !important;
+            }
+
+            .service-page .container {
+                max-width: 100% !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+            .service-page .row {
+                justify-content: center;
+                align-items: stretch;
+                /* Ensuring equal height rows */
+            }
+
+            .service-page .section-title.text-start,
+            .service-page .section-title.text-start h1,
+            .service-page .section-title.text-start h2,
+            .service-page .section-title.text-start h3,
+            .service-page .section-title.text-start h4,
+            .service-page .section-title.text-start h5,
+            .service-page .section-title.text-start h6 {
+                text-align: center !important;
+            }
+
+            .service-page .lead,
+            .service-page p,
+            .service-page .list-unstyled li {
+                text-align: center !important;
+            }
+
+            .service-page .list-unstyled li.d-flex {
+                justify-content: center !important;
+                align-items: center !important;
+            }
+
+            .service-page .list-unstyled li.d-flex.justify-content-between {
+                flex-direction: column;
+                gap: 0.6rem;
+            }
+
+            .service-page .services-grid .col-md-4 {
+                flex: 0 0 33.333%;
+                /* Keep 3 per row as seen in user screenshot */
+                max-width: 33.333%;
+                display: flex;
+                justify-content: center;
+                align-items: stretch;
+            }
+
+            .service-page .premium-card,
+            .service-page .image-reveal-wrapper,
+            .service-page .pulse-border,
+            .service-page img {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .service-page .services-grid .premium-card {
+                width: 100%;
+                max-width: 100%;
+                /* Allow to fill column */
+                display: flex;
+                /* Flex to align button to bottom */
+                flex-direction: column;
+                height: 100%;
+            }
+
+            .service-page .services-grid .premium-card .btn {
+                margin-top: auto;
+                /* Push button to bottom */
+                align-self: center;
+                width: fit-content;
+            }
+
+            .footer {
+                padding-bottom: 10px !important;
+                /* Reduce unwanted space below copyright */
+            }
+
+            .footer hr {
+                margin-top: 2rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+        }
+
         @media (max-width: 767.98px) {
             .service-page {
+                width: 100%;
+                max-width: 100%;
                 overflow-x: hidden;
                 font-size: 16px;
+            }
+
+            .service-page .services-hero {
+                padding-top: 105px !important;
             }
 
             .service-page .container,
@@ -247,6 +382,8 @@
                 max-width: 100% !important;
                 padding-left: 16px !important;
                 padding-right: 16px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
             }
 
             .service-page .row {
@@ -295,7 +432,7 @@
                 margin-left: auto;
                 margin-right: auto;
                 width: 100%;
-                max-width: 100%;
+                max-width: 340px;
                 padding: 24px 18px;
             }
 
@@ -442,8 +579,50 @@
     </section>
 
     <footer class="footer">
-        <div class="container text-center">
-            <p>&copy; 2026 MedWrite Pro. All rights reserved.</p>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 text-center text-lg-start">
+                    <a class="navbar-brand text-white mb-4" href="#">
+                        <i class="bi bi-shield-plus"></i>
+                        <span>MedWrite Pro</span>
+                    </a>
+                    <p class="text-muted mt-3">Providing premium medical writing services specializing in Regulatory,
+                        CER, and CME documentation for global pharmaceutical leaders.</p>
+                    <div class="social-links justify-content-center justify-content-lg-start">
+                        <a href="#" class="social-btn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 text-center text-md-start">
+                    <h5>Quick Links</h5>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="portfolio.html" class="footer-link">Portfolio</a>
+                    <a href="blog.html" class="footer-link">Blog</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                <div class="col-lg-2 col-md-4 text-center text-md-start">
+                    <h5>Services</h5>
+                    <a href="services.html" class="footer-link">Regulatory Writing</a>
+                    <a href="services.html" class="footer-link">CER Documentation</a>
+                    <a href="services.html" class="footer-link">CME Dev</a>
+                    <a href="services.html" class="footer-link">Clinical Summaries</a>
+                    <a href="services.html" class="footer-link">Manuscripts</a>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center text-md-start">
+                    <h5>Newsletter</h5>
+                    <p class="text-muted">Stay updated with medical writing trends.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Email address" aria-label="Email address">
+                        <button class="btn btn-premium" type="button">Join</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 border-secondary">
+            <div class="text-center text-muted small">
+                &copy; 2026 MedWrite Pro. All rights reserved. | Regulatory Compliant
+            </div>
         </div>
     </footer>
 
@@ -451,6 +630,3 @@
 </body>
 
 </html>
-
-
-

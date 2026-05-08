@@ -22,6 +22,14 @@
         }
 
         .auth-top .dark-mode-toggle {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 2px solid var(--medical-blue);
+            background: transparent;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             color: var(--primary);
         }
 
@@ -178,6 +186,28 @@
             background: rgba(255, 255, 255, 0.12);
             color: #f8fafc;
         }
+
+        @media (max-width: 480px) {
+            .auth-card {
+                padding: 30px 20px;
+            }
+
+            .btn-premium.py-3 {
+                padding-top: 12px !important;
+                padding-bottom: 12px !important;
+            }
+
+            .form-check-label {
+                font-size: 0.8rem !important;
+                white-space: nowrap;
+            }
+
+            .social-auth-btn {
+                font-size: 0.75rem !important;
+                padding: 10px 4px !important;
+                gap: 4px !important;
+            }
+        }
     </style>
 </head>
 
@@ -201,11 +231,11 @@
 
             <form>
                 <div class="row g-3">
-                    <div class="col-md-6 mb-3">
+                    <div class="col-12 mb-3">
                         <label class="form-label small fw-bold">Full Name</label>
                         <input type="text" class="form-control" placeholder="John Doe">
                     </div>
-                    <div class="col-md-6 mb-3">
+                    <div class="col-12 mb-3">
                         <label class="form-label small fw-bold">Company Name</label>
                         <input type="text" class="form-control" placeholder="Pharma Inc.">
                     </div>
@@ -225,8 +255,10 @@
                 <div class="mb-4">
                     <label class="form-label small fw-bold">Password</label>
                     <div class="password-wrap">
-                        <input id="registerPassword" type="password" class="form-control password-input" placeholder="........">
-                        <button type="button" class="password-toggle" data-password-toggle data-target="registerPassword" aria-label="Show password">
+                        <input id="registerPassword" type="password" class="form-control password-input"
+                            placeholder="........">
+                        <button type="button" class="password-toggle" data-password-toggle
+                            data-target="registerPassword" aria-label="Show password">
                             <i class="bi bi-eye"></i>
                         </button>
                     </div>
@@ -250,7 +282,6 @@
                     class="text-primary text-decoration-none fw-bold">Login here</a></p>
         </div>
     </div>
-
     <script src="assets/js/main.js"></script>
     <script>
         (function () {
@@ -268,4 +299,3 @@
 </body>
 
 </html>
-

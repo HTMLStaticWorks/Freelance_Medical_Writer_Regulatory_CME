@@ -8,10 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
 </head>
 
-<body>
-    <header class="header scrolled">
+<body class="blog-page">
+    <header class="header scrolled keep-scrolled">
         <div class="container">
             <nav class="navbar navbar-expand-xl">
                 <a class="navbar-brand" href="index.html">
@@ -52,35 +53,123 @@
             <a href="register.html" class="btn btn-premium w-100">Sign Up</a>
 </div>
     </div>
-    <section class="py-5 mt-5">
+    <section class="py-5 mt-5 text-white text-center"
+        style="background: linear-gradient(135deg, #1e3a8a 0%, #0ea5e9 100%);">
         <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <img src="assets/images/manuscript.png" class="img-fluid rounded-4 mb-5">
-                    <h1>Navigating the 2026 MDR Compliance Landscape</h1>
-                    <p class="lead">The medical device regulatory landscape is undergoing significant shifts as we move
-                        deeper into 2026.</p>
-                    <p>Clinical evaluation reports (CERs) remain the cornerstone of technical documentation. However,
-                        the expectations for data granularity and literature review robustness have increased
-                        significantly. In this article, we explore the top 5 areas where manufacturers often face
-                        scrutiny from Notified Bodies.</p>
-                    <ul>
-                        <li>Post-market clinical follow-up (PMCF) integration.</li>
-                        <li>Sufficient clinical evidence for legacy devices.</li>
-                        <li>State-of-the-art (SOTA) demonstration.</li>
-                    </ul>
-                    <a href="blog.html" class="btn btn-outline-premium mt-4">Back to Blog</a>
+            <h1 class="text-white">Scientific Insights & Regulatory Updates</h1>
+            <p class="opacity-75">Analysis and commentary on the evolving landscape of medical writing.</p>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <img src="assets/images/manuscript.png" alt="MDR Compliance Landscape"
+                        class="img-fluid w-100 rounded-4 shadow-sm" style="height: 420px; object-fit: cover;">
+                </div>
+                <div class="col-lg-6">
+                    <span class="badge bg-soft-blue text-primary mb-3">Regulatory</span>
+                    <h2 class="mb-3">Navigating the 2026 MDR Compliance Landscape</h2>
+                    <p class="text-muted mb-3">The medical device regulatory landscape is undergoing significant shifts
+                        as we move deeper into 2026. Clinical evaluation reports (CERs) remain the cornerstone of
+                        technical documentation, but expectations around evidence depth and traceability are rising.</p>
+                    <p class="text-muted mb-4">In this update, we examine where manufacturers face the highest review
+                        pressure and how to prepare stronger submissions with clearer clinical justification.</p>
+                    <div class="d-flex justify-content-center mt-4">
+                        <a href="blog.html" class="btn btn-outline-premium">Back to Blog</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <footer class="footer text-center py-4 bg-primary text-white">
-        <p>&copy; 2026 MedWrite Pro</p>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <span>Article Highlights</span>
+                <h2>Top Compliance Priorities for 2026</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="premium-card h-100 text-start align-items-start">
+                        <div class="card-icon"><i class="bi bi-clipboard2-pulse"></i></div>
+                        <h5>PMCF Integration</h5>
+                        <p class="text-muted mb-0">Demonstrate how post-market data is actively linked to benefit-risk
+                            evaluation across the product lifecycle.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="premium-card h-100 text-start align-items-start">
+                        <div class="card-icon"><i class="bi bi-search-heart"></i></div>
+                        <h5>Clinical Evidence Depth</h5>
+                        <p class="text-muted mb-0">Build a stronger rationale for legacy devices with transparent
+                            literature strategy and endpoint relevance.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="premium-card h-100 text-start align-items-start">
+                        <div class="card-icon"><i class="bi bi-diagram-3"></i></div>
+                        <h5>SOTA Justification</h5>
+                        <p class="text-muted mb-0">Position the device against current standards of care with a clear,
+                            evidence-led state-of-the-art narrative.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 text-center text-lg-start">
+                    <a class="navbar-brand text-white mb-4" href="#">
+                        <i class="bi bi-shield-plus"></i>
+                        <span>MedWrite Pro</span>
+                    </a>
+                    <p class="text-muted mt-3">Providing premium medical writing services specializing in Regulatory,
+                        CER, and CME documentation for global pharmaceutical leaders.</p>
+                    <div class="social-links justify-content-center justify-content-lg-start">
+                        <a href="#" class="social-btn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 text-center text-md-start">
+                    <h5>Quick Links</h5>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="portfolio.html" class="footer-link">Portfolio</a>
+                    <a href="blog.html" class="footer-link">Blog</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                <div class="col-lg-2 col-md-4 text-center text-md-start">
+                    <h5>Services</h5>
+                    <a href="services.html" class="footer-link">Regulatory Writing</a>
+                    <a href="services.html" class="footer-link">CER Documentation</a>
+                    <a href="services.html" class="footer-link">CME Dev</a>
+                    <a href="services.html" class="footer-link">Clinical Summaries</a>
+                    <a href="services.html" class="footer-link">Manuscripts</a>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center text-md-start">
+                    <h5>Newsletter</h5>
+                    <p class="text-muted">Stay updated with medical writing trends.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Email address" aria-label="Email address">
+                        <button class="btn btn-premium" type="button">Join</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 border-secondary">
+            <div class="text-center text-muted small">
+                &copy; 2026 MedWrite Pro. All rights reserved. | Regulatory Compliant
+            </div>
+        </div>
     </footer>
     <script src="assets/js/main.js"></script>
 </body>
 
 </html>
+
 
 
 

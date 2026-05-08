@@ -22,6 +22,14 @@
         }
 
         .auth-top .dark-mode-toggle {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 2px solid var(--medical-blue);
+            background: transparent;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             color: var(--primary);
         }
 
@@ -184,6 +192,29 @@
             background: rgba(255, 255, 255, 0.12);
             color: #f8fafc;
         }
+
+        @media (max-width: 480px) {
+            .auth-card {
+                padding: 30px 20px;
+            }
+
+            .remember-forgot {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                width: 100%;
+            }
+
+            .request-access-link {
+                display: block;
+                margin-top: 8px;
+            }
+
+            .social-auth-btn {
+                font-size: 0.75rem !important;
+                padding: 10px 4px !important;
+                gap: 4px !important;
+            }
+        }
     </style>
 </head>
 
@@ -213,13 +244,15 @@
                 <div class="mb-4">
                     <label class="form-label small fw-bold">Password</label>
                     <div class="password-wrap">
-                        <input id="loginPassword" type="password" class="form-control password-input" placeholder="........">
-                        <button type="button" class="password-toggle" data-password-toggle data-target="loginPassword" aria-label="Show password">
+                        <input id="loginPassword" type="password" class="form-control password-input"
+                            placeholder="........">
+                        <button type="button" class="password-toggle" data-password-toggle data-target="loginPassword"
+                            aria-label="Show password">
                             <i class="bi bi-eye"></i>
                         </button>
                     </div>
                 </div>
-                <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="d-flex justify-content-between align-items-center mb-4 remember-forgot">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="remember">
                         <label class="form-check-label small" for="remember">Remember me</label>
@@ -237,10 +270,9 @@
             </div>
 
             <p class="text-center small text-muted mb-0">Don't have an account? <a href="register.html"
-                    class="text-primary text-decoration-none fw-bold">Request Access</a></p>
+                    class="text-primary text-decoration-none fw-bold request-access-link">Request Access</a></p>
         </div>
     </div>
-
     <script src="assets/js/main.js"></script>
     <script>
         (function () {
@@ -258,4 +290,3 @@
 </body>
 
 </html>
-

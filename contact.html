@@ -74,29 +74,34 @@
                         communication strategies. Our team is ready to assist with your MDR compliance and clinical
                         reporting needs.</p>
 
-                    <div class="mt-5">
-                        <div class="d-flex align-items-center mb-4 gap-3">
-                            <div class="icon bg-soft-blue text-primary p-3 rounded-circle"><i
+                    <div class="contact-info-list mt-5">
+                        <div class="contact-info-item d-flex align-items-center mb-4 gap-3">
+                            <div class="icon contact-info-icon bg-soft-blue text-primary p-3 rounded-circle"><i
                                     class="bi bi-envelope-at fs-4"></i></div>
-                            <div>
+                            <div class="contact-info-content">
                                 <h5 class="mb-0">Email Us</h5>
                                 <p class="text-muted mb-0">consult@medwritepro.com</p>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center mb-4 gap-3">
-                            <div class="icon bg-soft-blue text-primary p-3 rounded-circle"><i
+                        <div class="contact-info-item d-flex align-items-center mb-4 gap-3">
+                            <div class="icon contact-info-icon bg-soft-blue text-primary p-3 rounded-circle"><i
                                     class="bi bi-geo-alt fs-4"></i></div>
-                            <div>
+                            <div class="contact-info-content">
                                 <h5 class="mb-0">Office Location</h5>
                                 <p class="text-muted mb-0">Medical District, Zurich, Switzerland</p>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center gap-3">
-                            <div class="icon bg-soft-blue text-primary p-3 rounded-circle"><i
+                        <div class="contact-info-item d-flex align-items-center gap-3">
+                            <div class="icon contact-info-icon bg-soft-blue text-primary p-3 rounded-circle"><i
                                     class="bi bi-linkedin fs-4"></i></div>
-                            <div>
+                            <div class="contact-info-content">
                                 <h5 class="mb-0">Professional Network</h5>
                                 <p class="text-muted mb-0">linkedin.com/in/medwritepro</p>
+                                <div class="social-links justify-content-start mt-3">
+                                    <a href="#" class="social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                                    <a href="#" class="social-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                                    <a href="#" class="social-btn" aria-label="Email"><i class="bi bi-envelope"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -221,6 +226,36 @@
             border-radius: 50%;
             box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
         }
+
+        .contact-info-item {
+            align-items: flex-start !important;
+        }
+
+        .contact-info-icon {
+            width: 52px;
+            height: 52px;
+            padding: 0 !important;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 52px;
+        }
+
+        .contact-info-content h5,
+        .contact-info-content p {
+            text-align: left;
+        }
+
+        .hq-logistics-card {
+            align-items: stretch !important;
+            text-align: left !important;
+        }
+
+        .hq-logistics-card h4,
+        .hq-logistics-card h6,
+        .hq-logistics-card p {
+            text-align: left !important;
+        }
     </style>
 
     <!-- NEW SECTION 1: Security & Confidentiality -->
@@ -277,7 +312,7 @@
 
                 <!-- Office Arrival Info -->
                 <div class="col-lg-5 anim-fade-up-stagger" style="animation-delay: 0.5s;">
-                    <div class="premium-card border-top border-4 border-primary p-4 p-md-5 h-100 bg-light shadow-sm">
+                    <div class="premium-card hq-logistics-card border-top border-4 border-primary p-4 p-md-5 h-100 bg-light shadow-sm">
                         <h4 class="fw-bold text-dark mb-4"><i class="bi bi-building me-2 text-primary"></i> HQ Logistics
                         </h4>
                         <div class="timeline-arrival mb-4 mt-2">
@@ -308,8 +343,50 @@
     </section>
 
     <footer class="footer">
-        <div class="container text-center">
-            <p>&copy; 2026 MedWrite Pro. All rights reserved.</p>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 text-center text-lg-start">
+                    <a class="navbar-brand text-white mb-4" href="#">
+                        <i class="bi bi-shield-plus"></i>
+                        <span>MedWrite Pro</span>
+                    </a>
+                    <p class="text-muted mt-3">Providing premium medical writing services specializing in Regulatory,
+                        CER, and CME documentation for global pharmaceutical leaders.</p>
+                    <div class="social-links justify-content-center justify-content-lg-start">
+                        <a href="#" class="social-btn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 text-center text-md-start">
+                    <h5>Quick Links</h5>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="portfolio.html" class="footer-link">Portfolio</a>
+                    <a href="blog.html" class="footer-link">Blog</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                <div class="col-lg-2 col-md-4 text-center text-md-start">
+                    <h5>Services</h5>
+                    <a href="services.html" class="footer-link">Regulatory Writing</a>
+                    <a href="services.html" class="footer-link">CER Documentation</a>
+                    <a href="services.html" class="footer-link">CME Dev</a>
+                    <a href="services.html" class="footer-link">Clinical Summaries</a>
+                    <a href="services.html" class="footer-link">Manuscripts</a>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center text-md-start">
+                    <h5>Newsletter</h5>
+                    <p class="text-muted">Stay updated with medical writing trends.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Email address" aria-label="Email address">
+                        <button class="btn btn-premium" type="button">Join</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 border-secondary">
+            <div class="text-center text-muted small">
+                &copy; 2026 MedWrite Pro. All rights reserved. | Regulatory Compliant
+            </div>
         </div>
     </footer>
 

@@ -8,9 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
 </head>
 
-<body>
+<body class="service-page">
 
     <header class="header scrolled keep-scrolled">
         <div class="container">
@@ -126,26 +127,47 @@
             <div class="section-title text-center mb-4">
                 <h3>FAQs</h3>
             </div>
-            <div class="row g-3">
-                <div class="col-12">
-                    <div class="p-4 border rounded-4 bg-white">
-                        <h5 class="mb-2">Do you work with existing sponsor templates?</h5>
-                        <p class="text-muted mb-0">Yes. We write directly in your approved templates and follow your internal
-                            style guide and SOP structure.</p>
+            <div class="accordion" id="serviceFAQ">
+                <div class="accordion-item border rounded-4 overflow-hidden mb-3">
+                    <h2 class="accordion-header" id="faqHeadingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                            Do you work with existing sponsor templates?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne"
+                        data-bs-parent="#serviceFAQ">
+                        <div class="accordion-body text-muted">
+                            Yes. We write directly in your approved templates and follow your internal style guide and SOP structure.
+                        </div>
                     </div>
                 </div>
-                <div class="col-12">
-                    <div class="p-4 border rounded-4 bg-white">
-                        <h5 class="mb-2">Can you support urgent submissions?</h5>
-                        <p class="text-muted mb-0">Yes. Priority timelines are available based on document complexity and
-                            reviewer bandwidth.</p>
+                <div class="accordion-item border rounded-4 overflow-hidden mb-3">
+                    <h2 class="accordion-header" id="faqHeadingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                            Can you support urgent submissions?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo"
+                        data-bs-parent="#serviceFAQ">
+                        <div class="accordion-body text-muted">
+                            Yes. Priority timelines are available based on document complexity and reviewer bandwidth.
+                        </div>
                     </div>
                 </div>
-                <div class="col-12">
-                    <div class="p-4 border rounded-4 bg-white">
-                        <h5 class="mb-2">How do you maintain confidentiality?</h5>
-                        <p class="text-muted mb-0">All projects are delivered under NDA with secure file exchange and restricted
-                            access controls.</p>
+                <div class="accordion-item border rounded-4 overflow-hidden">
+                    <h2 class="accordion-header" id="faqHeadingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                            How do you maintain confidentiality?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree"
+                        data-bs-parent="#serviceFAQ">
+                        <div class="accordion-body text-muted">
+                            All projects are delivered under NDA with secure file exchange and restricted access controls.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -158,6 +180,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 

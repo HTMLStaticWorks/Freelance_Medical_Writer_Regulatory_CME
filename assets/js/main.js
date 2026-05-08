@@ -136,6 +136,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Back To Top (only on pages that include footer)
+    const footer = document.querySelector('.footer');
+    if (footer) {
+        let backToTop = document.getElementById('backToTop');
+        if (!backToTop) {
+            backToTop = document.createElement('button');
+            backToTop.id = 'backToTop';
+            backToTop.className = 'back-to-top';
+            backToTop.type = 'button';
+            backToTop.setAttribute('aria-label', 'Back to top');
+            backToTop.innerHTML = '<i class="bi bi-arrow-up"></i>';
+            document.body.appendChild(backToTop);
+        }
+
+        const toggleBackToTop = () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        };
+
+        window.addEventListener('scroll', toggleBackToTop);
+        toggleBackToTop();
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
     // Animation on Scroll
     const observerOptions = {
         threshold: 0.1

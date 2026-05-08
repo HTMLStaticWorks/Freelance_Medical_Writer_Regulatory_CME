@@ -26,17 +26,19 @@
                         <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="d-flex align-items-center gap-3 ms-auto">
                     <div id="darkModeToggle" class="dark-mode-toggle"><i class="bi bi-moon"></i></div>
                     <button id="rtlToggle" type="button" class="rtl-toggle" aria-label="Toggle RTL"><i
                             class="bi bi-arrow-left-right"></i></button>
-                    <a href="dashboard.html" class="rtl-toggle d-none d-xl-inline-flex" aria-label="Dashboard"><i class="bi bi-grid-1x2"></i></a>
+                    <a href="dashboard.html" class="rtl-toggle d-none d-xl-inline-flex" aria-label="Dashboard"><i
+                            class="bi bi-grid-1x2"></i></a>
                     <a href="login.html" class="btn btn-outline-premium d-none d-xl-flex">Login</a>
                     <a href="register.html" class="btn btn-premium d-none d-xl-flex">Sign Up</a>
-<div id="mobileMenuToggle" class="d-xl-none fs-1 cursor-pointer"><i class="bi bi-list"></i></div>
+                    <div id="mobileMenuToggle" class="d-xl-none fs-1 cursor-pointer"><i class="bi bi-list"></i></div>
                 </div>
             </nav>
         </div>
@@ -47,14 +49,15 @@
         <a class="nav-link" href="home-2.html">Home 2</a>
         <a class="nav-link" href="about.html">About</a>
         <a class="nav-link" href="services.html">Services</a>
-        <a class="nav-link" href="blog.html">Blog</a>        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="blog.html">Blog</a> <a class="nav-link" href="contact.html">Contact</a>
         <div class="mt-4 d-flex flex-column gap-3 w-75">
             <a href="login.html" class="btn btn-outline-premium w-100">Login</a>
             <a href="register.html" class="btn btn-premium w-100">Sign Up</a>
-</div>
+        </div>
     </div>
 
-    <section class="py-5 mt-5 bg-dark text-white text-center">
+    <section class="py-5 mt-5 text-white text-center"
+        style="background: linear-gradient(135deg, #1e3a8a 0%, #0ea5e9 100%);">
         <div class="container mt-5">
             <h1 class="text-white">Scientific Insights & Regulatory Updates</h1>
             <p class="opacity-75">Analysis and commentary on the evolving landscape of medical writing.</p>
@@ -126,6 +129,10 @@
             text-align: left;
         }
 
+        .blog-grid .premium-card h5 {
+            min-height: 2.6em;
+        }
+
         .blog-grid .premium-card .badge {
             display: inline-block;
             margin-left: 0;
@@ -136,6 +143,38 @@
             display: flex;
             width: fit-content;
             margin: 0 auto 0 0;
+        }
+
+        @media (min-width: 768px) and (max-width: 1199.98px) {
+            .blog-grid .row {
+                align-items: stretch;
+            }
+
+            .blog-grid .premium-card {
+                height: 100%;
+                display: flex !important;
+                flex-direction: column;
+            }
+
+            .blog-grid .premium-card .p-4 {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .blog-grid .premium-card .btn-outline-premium {
+                margin-top: auto !important;
+            }
+
+            .footer {
+                padding-bottom: 10px !important;
+            }
+
+            .footer hr {
+                margin-top: 2rem !important;
+                margin-bottom: 1.5rem !important;
+            }
         }
 
         .anim-slide-up-box {
@@ -360,16 +399,54 @@
         </div>
     </section>
 
-    <footer class="footer mt-5">
-        <div class="container text-center">
-            <p>&copy; 2026 MedWrite Pro. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 text-center text-lg-start">
+                    <a class="navbar-brand text-white mb-4" href="#">
+                        <i class="bi bi-shield-plus"></i>
+                        <span>MedWrite Pro</span>
+                    </a>
+                    <p class="text-muted mt-3">Providing premium medical writing services specializing in Regulatory,
+                        CER, and CME documentation for global pharmaceutical leaders.</p>
+                    <div class="social-links justify-content-center justify-content-lg-start">
+                        <a href="#" class="social-btn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 text-center text-md-start">
+                    <h5>Quick Links</h5>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="portfolio.html" class="footer-link">Portfolio</a>
+                    <a href="blog.html" class="footer-link">Blog</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                <div class="col-lg-2 col-md-4 text-center text-md-start">
+                    <h5>Services</h5>
+                    <a href="services.html" class="footer-link">Regulatory Writing</a>
+                    <a href="services.html" class="footer-link">CER Documentation</a>
+                    <a href="services.html" class="footer-link">CME Dev</a>
+                    <a href="services.html" class="footer-link">Clinical Summaries</a>
+                    <a href="services.html" class="footer-link">Manuscripts</a>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center text-md-start">
+                    <h5>Newsletter</h5>
+                    <p class="text-muted">Stay updated with medical writing trends.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Email address" aria-label="Email address">
+                        <button class="btn btn-premium" type="button">Join</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 border-secondary">
+            <div class="text-center text-muted small">
+                &copy; 2026 MedWrite Pro. All rights reserved. | Regulatory Compliant
+            </div>
         </div>
     </footer>
-
     <script src="assets/js/main.js"></script>
 </body>
 
 </html>
-
-
-

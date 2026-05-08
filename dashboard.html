@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
 </head>
 
 <body>
@@ -16,10 +17,10 @@
     <div class="dashboard-wrapper">
         <!-- Sidebar -->
         <aside id="dashboardSidebar" class="dashboard-sidebar">
-            <div class="brand mb-5 d-flex align-items-center gap-2">
+            <a href="index.html" class="brand mb-5 d-flex align-items-center gap-2 text-decoration-none text-white">
                 <i class="bi bi-shield-plus text-primary fs-3"></i>
                 <span class="fw-bold fs-4">MedWrite Pro</span>
-            </div>
+            </a>
 
             <nav class="nav flex-column gap-2 mb-auto">
                 <a class="nav-link active" href="dashboard.html"><i class="bi bi-graph-up-arrow"></i> Analytics</a>
@@ -27,6 +28,11 @@
                 <a class="nav-link" href="dashboard-orders.html"><i class="bi bi-bag-check"></i> Orders</a>
                 <a class="nav-link" href="dashboard-messages.html"><i class="bi bi-chat-dots"></i> Messages</a>
             </nav>
+            <div class="dashboard-sidebar-controls d-flex gap-3 mt-3 mb-2">
+                <div id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle theme"><i class="bi bi-moon"></i></div>
+                <button id="rtlToggle" type="button" class="rtl-toggle" aria-label="Toggle RTL"><i
+                        class="bi bi-arrow-left-right"></i></button>
+            </div>
             <div class="mt-4">
                 <a class="nav-link text-danger" href="index.html"><i class="bi bi-box-arrow-left"></i> Logout</a>
             </div>
@@ -38,9 +44,9 @@
             <div class="dashboard-topbar">
                 <div class="d-flex align-items-center gap-3">
                     <button id="sidebarToggle" class="btn btn-light d-xl-none"><i class="bi bi-list"></i></button>
-                    <h2 class="mb-0 fs-4">Dashboard </h2>
+                    <h2 class="mb-0 fs-4">Welcome message</h2>
                 </div>
-                <div class="d-flex align-items-center gap-4">
+                <div class="dashboard-topbar-actions d-flex align-items-center gap-4">
                     <div class="search-box d-none d-md-block">
                         <input type="text" class="form-control rounded-pill px-4" placeholder="Search projects...">
                     </div>
@@ -127,9 +133,85 @@
         </main>
     </div>
 
+    <style>
+        .stat-card,
+        .compliance-list {
+            text-align: center;
+        }
+
+        .dashboard-topbar-actions {
+            margin-left: auto;
+            flex-wrap: nowrap;
+        }
+
+        .dashboard-sidebar-controls {
+            justify-content: flex-start;
+        }
+
+        .compliance-list h5,
+        .stat-card h2,
+        .stat-card p {
+            text-align: center;
+        }
+
+        body.dark-mode .dashboard-wrapper {
+            background: #020617;
+        }
+
+        body.dark-mode .dashboard-main {
+            color: #e2e8f0;
+        }
+
+        body.dark-mode .dashboard-topbar,
+        body.dark-mode .stat-card,
+        body.dark-mode .compliance-list {
+            background: #0f172a;
+            color: #e2e8f0;
+            border-color: rgba(148, 163, 184, 0.2);
+        }
+    </style>
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/dashboard.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.body;
+            const root = document.documentElement;
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const rtlToggle = document.getElementById('rtlToggle');
+
+            const setDarkMode = (enabled) => {
+                body.classList.toggle('dark-mode', enabled);
+                localStorage.setItem('darkMode', enabled ? 'enabled' : 'disabled');
+                if (darkModeToggle) {
+                    darkModeToggle.innerHTML = enabled ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon"></i>';
+                }
+            };
+
+            const setRtl = (enabled) => {
+                root.setAttribute('dir', enabled ? 'rtl' : 'ltr');
+                localStorage.setItem('rtlMode', enabled ? 'enabled' : 'disabled');
+            };
+
+            setDarkMode(localStorage.getItem('darkMode') === 'enabled');
+            setRtl(localStorage.getItem('rtlMode') === 'enabled');
+
+            if (darkModeToggle) {
+                darkModeToggle.addEventListener('click', () => {
+                    setDarkMode(!body.classList.contains('dark-mode'));
+                });
+            }
+
+            if (rtlToggle) {
+                rtlToggle.addEventListener('click', () => {
+                    setRtl(root.getAttribute('dir') !== 'rtl');
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
+
+
