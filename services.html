@@ -246,7 +246,7 @@
 
             .service-page,
             .service-page section,
-            .service-page .container {
+            .service-page section .container {
                 width: 100%;
                 max-width: 100vw;
                 margin-left: auto !important;
@@ -270,13 +270,13 @@
                 overflow-x: hidden;
             }
 
-            .service-page .container,
-            .service-page .row,
-            .service-page [class*="col-"] {
+            .service-page section .container,
+            .service-page section .row,
+            .service-page section [class*="col-"] {
                 text-align: center !important;
             }
 
-            .service-page .container {
+            .service-page section .container {
                 max-width: 100% !important;
                 margin-left: auto !important;
                 margin-right: auto !important;
@@ -284,7 +284,7 @@
                 padding-right: 20px !important;
             }
 
-            .service-page .row {
+            .service-page section .row {
                 justify-content: center;
                 align-items: stretch;
                 /* Ensuring equal height rows */
@@ -300,9 +300,9 @@
                 text-align: center !important;
             }
 
-            .service-page .lead,
-            .service-page p,
-            .service-page .list-unstyled li {
+            .service-page section .lead,
+            .service-page section p,
+            .service-page section .list-unstyled li {
                 text-align: center !important;
             }
 
@@ -358,6 +358,44 @@
             .footer hr {
                 margin-top: 2rem !important;
                 margin-bottom: 1.5rem !important;
+            }
+
+            /* Footer: match home page format - left-aligned columns in tablet */
+            .service-page .footer .row {
+                justify-content: flex-start !important;
+                align-items: flex-start !important;
+            }
+
+            .service-page .footer [class*="col-"],
+            .service-page .footer .col-lg-4,
+            .service-page .footer .col-lg-2,
+            .service-page .footer .col-md-4 {
+                text-align: left !important;
+            }
+
+            .service-page .footer h5 {
+                text-align: left !important;
+            }
+
+            .service-page .footer .footer-link {
+                text-align: left !important;
+                display: block;
+            }
+
+            .service-page .footer p.text-muted {
+                text-align: left !important;
+            }
+
+            .service-page .footer .social-links {
+                justify-content: flex-start !important;
+            }
+
+            .service-page .footer .input-group {
+                justify-content: flex-start !important;
+            }
+
+            .service-page .footer .navbar-brand {
+                justify-content: flex-start !important;
             }
         }
 

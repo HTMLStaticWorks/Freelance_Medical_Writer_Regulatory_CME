@@ -7,17 +7,29 @@
 
 .dashboard-sidebar {
     width: 280px;
-    background: #0f172a;
-    color: white;
+    background: #ffffff;
+    color: #0f172a;
     padding: 30px;
     display: flex;
     flex-direction: column;
     transition: all 0.3s ease;
     z-index: 1100;
+    border-right: 1px solid #e2e8f0;
+}
+
+.dashboard-sidebar .navbar-brand,
+.dashboard-sidebar .navbar-brand span {
+    color: #0f172a !important;
+}
+
+/* Override Bootstrap's text-white on sidebar brand link in light mode */
+.dashboard-sidebar a.brand.text-white,
+.dashboard-sidebar a.brand.text-white span {
+    color: #0f172a !important;
 }
 
 .dashboard-sidebar .nav-link {
-    color: #94a3b8 !important;
+    color: #475569 !important;
     font-weight: 500;
     margin: 5px 0;
     padding: 12px 15px;
@@ -29,6 +41,36 @@
 
 .dashboard-sidebar .nav-link:hover,
 .dashboard-sidebar .nav-link.active {
+    background: #f1f5f9;
+    color: #2563eb !important;
+}
+
+/* Dark mode: restore original dark sidebar */
+body.dark-mode .dashboard-sidebar {
+    background: #0f172a;
+    color: white;
+    border-right-color: #1e293b;
+}
+
+/* Dark mode: restore white brand */
+body.dark-mode .dashboard-sidebar a.text-white,
+body.dark-mode .dashboard-sidebar a.text-white span,
+body.dark-mode .dashboard-sidebar a.brand.text-white,
+body.dark-mode .dashboard-sidebar a.brand.text-white span {
+    color: #ffffff !important;
+}
+
+body.dark-mode .dashboard-sidebar .navbar-brand,
+body.dark-mode .dashboard-sidebar .navbar-brand span {
+    color: #ffffff !important;
+}
+
+body.dark-mode .dashboard-sidebar .nav-link {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .dashboard-sidebar .nav-link:hover,
+body.dark-mode .dashboard-sidebar .nav-link.active {
     background: rgba(255, 255, 255, 0.1);
     color: white !important;
 }
