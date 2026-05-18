@@ -565,6 +565,24 @@ section {
     font-size: 1.5rem;
     margin: 10px 0;
     cursor: pointer;
+    position: relative;
+}
+
+.mobile-nav .nav-link.active {
+    color: var(--accent) !important;
+    font-weight: 700;
+}
+
+.mobile-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 36px;
+    height: 2px;
+    background: var(--accent);
+    border-radius: 2px;
 }
 
 .mobile-nav .mobile-nav-controls {

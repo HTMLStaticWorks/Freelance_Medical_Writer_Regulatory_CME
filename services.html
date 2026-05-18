@@ -482,6 +482,21 @@
                 margin-right: auto;
             }
         }
+
+        /* Ensure step card headings in Secure Workflow section have similar height so descriptions align on same line on desktop */
+        @media (min-width: 1025px) {
+            .workflow-card-title {
+                min-height: 54px;
+            }
+        }
+
+        /* One by one format for Secure Workflow cards at 1024px view / tablet view */
+        @media (min-width: 768px) and (max-width: 1024.98px) {
+            .workflow-row > [class*="col-"] {
+                flex: 0 0 100% !important;
+                max-width: 100% !important;
+            }
+        }
     </style>
 
     <!-- NEW SECTION 1: Therapeutic Area Expertise -->
@@ -620,14 +635,14 @@
 
             <!-- Client Communication & Collaboration Flow -->
             <h3 class="h4 text-dark text-center mb-4 fw-bold"><i class="bi bi-chat-left-dots text-primary me-2"></i> Client Collaboration & Communication Flow</h3>
-            <div class="row g-4 justify-content-center text-dark text-center position-relative mb-5">
+            <div class="workflow-row row g-4 justify-content-center text-dark text-center position-relative mb-5">
                 <!-- Step 1 -->
                 <div class="col-md-3">
                     <div class="premium-card p-4 h-100 hover-lift border">
                         <div class="rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 70px; height: 70px; font-size: 1.8rem; color: var(--medical-blue);">
                             <i class="bi bi-box-arrow-in-right"></i>
                         </div>
-                        <h5 class="fw-bold mb-2">1. Secure Intake</h5>
+                        <h5 class="fw-bold mb-2 workflow-card-title">1. Secure Intake</h5>
                         <p class="small text-muted mb-0">Upload source clinical data via encrypted portal with sign-off on scope.</p>
                     </div>
                 </div>
@@ -637,7 +652,7 @@
                         <div class="rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 70px; height: 70px; font-size: 1.8rem; color: var(--medical-blue);">
                             <i class="bi bi-file-earmark-diff"></i>
                         </div>
-                        <h5 class="fw-bold mb-2">2. Iterative Drafting</h5>
+                        <h5 class="fw-bold mb-2 workflow-card-title">2. Iterative Drafting</h5>
                         <p class="small text-muted mb-0">MD/PhD medical writers build the core scientific document narrative.</p>
                     </div>
                 </div>
@@ -647,7 +662,7 @@
                         <div class="rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 70px; height: 70px; font-size: 1.8rem; color: var(--medical-blue);">
                             <i class="bi bi-arrow-repeat"></i>
                         </div>
-                        <h5 class="fw-bold mb-2">3. Collaborative Review</h5>
+                        <h5 class="fw-bold mb-2 workflow-card-title">3. Collaborative Review</h5>
                         <p class="small text-muted mb-0">Real-time status updates and track-change revision runs through secure link.</p>
                     </div>
                 </div>
@@ -657,7 +672,7 @@
                         <div class="rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 70px; height: 70px; font-size: 1.8rem; color: var(--medical-blue);">
                             <i class="bi bi-shield-check"></i>
                         </div>
-                        <h5 class="fw-bold mb-2">4. Final Sign-off</h5>
+                        <h5 class="fw-bold mb-2 workflow-card-title">4. Final Sign-off</h5>
                         <p class="small text-muted mb-0">Secure delivery of clean source files fully prepared for global submission.</p>
                     </div>
                 </div>
