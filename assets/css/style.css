@@ -140,13 +140,13 @@ p {
     z-index: 1000;
     background: transparent;
     transition: var(--transition);
-    padding: 20px 0;
+    padding: 12px 0;
 }
 
 .header.scrolled {
     background: var(--glass);
     backdrop-filter: blur(10px);
-    padding: 15px 0;
+    padding: 8px 0;
     box-shadow: var(--shadow-sm);
     border-bottom: 1px solid var(--glass-border);
 }
@@ -471,7 +471,7 @@ section {
 
     /* Mobile header alignment */
     .header {
-        padding: 12px 0;
+        padding: 8px 0;
     }
 
     .header .container {
@@ -597,4 +597,38 @@ section {
 .mobile-nav .mobile-nav-controls .rtl-toggle:hover {
     background: rgba(255, 255, 255, 0.14);
     color: var(--white);
+}
+
+/* Inner Page Hero Sections (Non-Home Pages) */
+body:is(.about-page, .service-page, .pricing-page, .contact-page, .blog-page) > section.py-5.mt-5,
+body:is(.about-page, .service-page, .pricing-page, .contact-page, .blog-page) > section.services-hero {
+    margin-top: 76px !important; /* Offset for sticky nav header */
+    padding: 120px 0 !important; /* Height increase & perfectly balanced top/bottom padding spacing */
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center !important;
+}
+
+body:is(.about-page, .service-page, .pricing-page, .contact-page, .blog-page) > section.py-5.mt-5 .container,
+body:is(.about-page, .service-page, .pricing-page, .contact-page, .blog-page) > section.services-hero .container {
+    margin-top: 0 !important; /* Replaces unbalanced mt-5 inner margins for exact vertical centering */
+    margin-bottom: 0 !important;
+}
+
+body:is(.about-page, .service-page, .pricing-page, .contact-page, .blog-page) > section.py-5.mt-5 h1,
+body:is(.about-page, .service-page, .pricing-page, .contact-page, .blog-page) > section.services-hero h1 {
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2.75rem; /* Visually balanced visual scale */
+}
+
+body:is(.about-page, .service-page, .pricing-page, .contact-page, .blog-page) > section.py-5.mt-5 p,
+body:is(.about-page, .service-page, .pricing-page, .contact-page, .blog-page) > section.services-hero p {
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
 }
