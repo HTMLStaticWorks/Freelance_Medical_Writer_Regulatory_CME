@@ -189,6 +189,11 @@ body.dark-mode .dashboard-sidebar .nav-link.active {
         width: 36px !important;
         height: 36px !important;
     }
+
+    .status-badge {
+        display: inline-block;
+        white-space: nowrap;
+    }
 }
 
 /* Dashboard Topbar Controls */
